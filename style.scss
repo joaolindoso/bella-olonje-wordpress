@@ -1,0 +1,442 @@
+
+
+// Semantic color scheme
+$theme-colors: (
+  primary: #007bff,
+  secondary: #004EA3,
+  success: #28a745,
+  info: #00fbff,
+  warning: #ffc107,
+  danger: #dc3545,
+  light: #f8f9fa,
+  dark: #343a40
+);
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+ 
+$enable-rounded:            true !default;
+$enable-shadows:            false;
+$enable-gradients:          false;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+// Variables
+//
+// Theme settings.
+
+$body-bg: white;
+$body-color: #ffffff;
+$body-color-inverse: invert($body-color) !default;
+$link-color: #007bff;
+
+
+$font-family-base: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$headings-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-h1: 2.5 * $font-size-base;
+$font-size-h2: 2 * $font-size-base;
+$font-size-h3: 1.75 * $font-size-base;
+$font-size-h4: 1.5 * $font-size-base;
+$font-size-h5: 1.25 * $font-size-base;
+$font-size-h6: $font-size-base;
+
+$display1-size: 6 * $font-size-base;
+$display2-size: 5.5 * $font-size-base;
+$display3-size: 4.5 * $font-size-base;
+$display4-size: 3.5 * $font-size-base;
+
+$border-radius: .25rem;
+
+
+@import 'bootstrap-4.0.0-beta.1';
+
+
+body > * {
+  background-size: cover;
+}
+
+.opaque-overlay {
+  overflow: hidden;
+  position: relative; 
+  > *:first-child:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    pointer-events:none;
+    /*background: rgba(map-get($theme-colors, 'dark'), 0.25);*/
+    background: rgba(#444, 0.25);
+  }
+}
+
+
+.gradient-overlay {
+  overflow: hidden;
+  position: relative; 
+  > *:first-child:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px; 
+    pointer-events:none;
+    /*background: linear-gradient(to top , map-get($theme-colors, 'dark') 0%, transparent 100%);*/
+    background: linear-gradient(to top, #000, #444);
+    opacity: 0.8;
+
+  }
+}
+
+/*
+* CSS Personalizado
+*/
+/* Chamada para Font local */
+@font-face {
+  font-family: "Poppins";
+  src: url("assets/fonts/poppins/Poppins-Medium.ttf") format("truetype");
+  /* usar outros src para outros formatos */ }
+
+.poppins-light {
+  font-family: Poppins;
+  font-weight: 200; }
+
+.poppins-medium {
+  font-family: Poppins;
+  font-weight: 700; }
+
+.poppins-black {
+  font-family: Poppins;
+  font-weight: 900; }
+
+.text-black {
+  color: #000000 !important;
+}
+
+.text-orange {
+  color: #FA4A0C !important;
+}
+
+.text-gray {
+  color: #737373 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Poppins, Arial, sans-serif;
+   }
+
+h1 {
+  line-height: 70px;
+  font-weight: 700;
+  font-size: 58px;
+}
+
+h2 {
+  line-height: 60px;
+  font-weight: 600;
+  font-size: 44px;
+}
+
+.hat-how-to-work {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+}
+
+.title-how-to-work {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  color: #252B42;
+
+}
+
+#title-section-how-the-app-works {
+  font-size: 44px;
+  font-family: Montserrat, sans-serif;
+}
+
+.secondary-title-how-to-work {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  text-align: left;
+}
+
+.title-banner-footer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+.second-title-banner-footer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  text-align: center;
+}
+
+h3 {
+  line-height: 36px;
+  font-size: 24px; }
+
+#text-banner-top h3 {
+  font-family: Montserrat, Arial, sans-serif; }
+
+.nav-item {
+  font-weight: bold; }
+
+a.nav-link:active {
+  color: #FA4A0C !important; }
+
+a.nav-link:hover {
+  color: #FA4A0C !important; }
+
+.bg-banner-top {
+  background-image: url("assets/images/banner-topo.jpg");
+  min-height: 619px; }
+
+.bg-banner-footer {
+  background-image: url("assets/images/banner-rodape.png");
+  min-height: 619px; }
+
+.bg-banner-footer-mobile {
+  background-color: #252B42 !important;
+}
+
+#btn-banner-top a:hover {
+  color: #ffffff;
+}
+
+#btn-banner-footer a:hover {
+  color: #ffffff;
+}
+
+.general-btn-rounded {
+  padding: 18px 50px;
+  border-radius: 35px; 
+  margin: 10px;
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+.general-btn-squad-rounded {
+  padding: 18px 31px;
+  border-radius: 10px; 
+  margin: 10px;
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+a.general-btn-squad-rounded:hover {
+  color: white;
+}
+
+a.general-btn-rounded:hover {
+  color: white;
+}
+
+.btn-size-top {
+  font-size: 24px; 
+}
+
+.btn-size-footer {
+  font-size: 16px;
+}
+
+.btn-red {
+  background-color: #FA4A0C; 
+  color: #ffffff; 
+  border: #FA4A0C 1px solid; 
+}
+
+.btn-red a:hover {
+  color: #ffffff !important; 
+}
+
+.btn-wit {
+  color: #ffffff; 
+  border: #ffffff 1px solid;  
+}
+
+.btn-wit a:hover {
+  color: #ffffff !important; 
+}
+
+.btn-wit-top {
+  color: #ffffff; 
+  border: #ffffff 1px solid;  
+}
+
+.btn-wit-top a:hover {
+  color: #ffffff !important; 
+}
+
+#food-for-everyone {
+  margin-top: -100px; 
+  position: relative;
+}
+
+.hr-home {
+  border: 2px solid #E4E4E4;
+  width: 100%;
+  max-width: 884px;
+}
+
+.shadow-img {
+  box-shadow: 0px 0px 50px #e9ecef;
+  -webkit-box-shadow:0px 0px 50px #e9ecef; 
+  -moz-box-shadow:0px 0px 50px #e9ecef; 
+  border-radius: 45px;
+}
+
+footer {
+  background-color: #ffffff;
+}
+
+#footer-items {
+  height: 200px;
+}
+
+footer .text-copyright {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0.10000000149011612px;
+  text-align: right;
+  color: #5c5c5c;
+}
+
+.social-icons img {
+  margin: 20px;
+}
+
+#version-mobile-footer {
+  display: none !important;
+}
+
+#version-normal-footer {
+  display: flex !important;
+}
+
+/*
+* Versão Mobile
+*/
+@media screen and (max-width: 768px) {
+
+  #banner-topo {
+    height: 778px;
+    padding: 5px !important;
+  }
+
+  #text-banner-top h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0.20000000298023224px;
+    text-align: center;
+    color: #252B42;
+  }
+
+  #hat-banner-top {
+    color: #737373 !important;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.10000000149011612px;
+    text-align: center;
+  }
+
+  #second-title-banner-top {
+    color: #737373;
+  }
+
+  .bg-banner-top {
+    background-image: none !important;
+    background-color: f1f1f1;
+  }
+
+  .btn-wit-top {
+    color: #FA4A0C;
+    border: #FA4A0C 1px solid;  
+  }
+  
+  .btn-wit-top a:hover {
+    color: #FA4A0C !important; 
+  }
+  
+  #secao-2-home {
+    margin: 0px !important;
+    padding-top: 0px !important;
+  }
+  
+  .logo-rodape {
+    display: none;
+  }
+
+  #version-mobile-footer {
+    display: flex !important;
+    height: 564px;
+  }
+
+  #version-normal-footer {
+    display: none !important;
+  }
+
+  .title-how-to-work, .hat-how-to-work, .secondary-title-how-to-work {
+    text-align: center !important;
+  }
+
+  #title-section-how-the-app-works {
+    font-size: 24px;
+    font-family: Montserrat, sans-serif;
+  }
+
+  .shadow-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 40px;
+  }
+
+  .gridInverseMobile1 {
+    order: 2;
+    -webkit-order: 2;
+  }
+  .gridInverseMobile2 {
+    order: 1;
+    -webkit-order: 1;
+  }
+
+
+}
