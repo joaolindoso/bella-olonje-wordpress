@@ -2,7 +2,7 @@
 Theme Name: Bella Olonje WP
 Theme URI: http://www.todayhost.com.br/site/bella-olonje
 Description: Tema do Projeto Bella Olonje WP
-Author: João Lindoso
+Author: Jo達o Lindoso
 Author URI: http://www.todayhost.com.br/
 Version: 1.0
 Tags: Bella Olonje, Trampos, Todayhost, wordpress
@@ -5655,6 +5655,14 @@ h2 {
   letter-spacing: 0.1px;
 }
 
+ul.container li:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+ul.container img li:nth-child(2) {
+    text-align: right;
+}
+
 .title-how-to-work {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -5845,7 +5853,7 @@ footer .text-copyright {
 }
 
 /*
-* Versão Mobile
+* Vers達o Mobile
 */
 @media screen and (max-width: 768px) {
 

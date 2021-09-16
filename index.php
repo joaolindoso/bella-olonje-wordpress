@@ -47,16 +47,15 @@
 
 <!-- inserção de loops -->
 
-<div class="row">
+<ul class="container posts-wtaw">
     <?php 
         $acao_query1 = new WP_Query( array('category_name'=>'how-the-app-works', 'posts_per_page'=>3, 'order'=>'DESC'));
 
         while ( $acao_query1->have_posts() ) : $acao_query1->the_post();
     ?>
 
-            <section class="w-100 mt-1">
-                <div class="container">
-                    <div class="row mt-2 mb-5 p-5">
+            
+                    <li class="row mt-2 mb-5 p-5">
                         <div class="col-md-5 m-0 text-left gridInverseMobile1">
                             <?php the_post_thumbnail('full', array( 'class' => 'img-fuid shadow-img'));?>
                         </div>
@@ -75,13 +74,12 @@
                                 <?php the_excerpt(); ?>
                             </h4>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </li>
+                
 
     <?php endwhile; wp_reset_query(); ?> 
 
-</div>
+</ul>
 
 <!-- Banner post type -->
 
