@@ -5659,8 +5659,8 @@ ul.container li:nth-child(2) {
     flex-direction: row-reverse;
 }
 
-ul.container img li:nth-child(2) {
-    text-align: right;
+ul.container li:nth-child(2) img {
+  margin-left: 100px;
 }
 
 .title-how-to-work {
@@ -5669,7 +5669,6 @@ ul.container img li:nth-child(2) {
   font-size: 40px;
   line-height: 57px;
   color: #252B42;
-
 }
 
 #title-section-how-the-app-works {
