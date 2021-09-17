@@ -40,8 +40,9 @@
 
   <nav class="navbar navbar-expand-md navbar-light bg-white">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-bella-olonje-topo.png"> </a>
+        <a class="navbar-brand" href="<?php bloginfo('wpurl');?>">
+            <img src="<?php header_image(); ?>"  alt="<?php bloginfo('name'); ?>" class="img-fluid"/>
+        </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
         <ul class="navbar-nav">
