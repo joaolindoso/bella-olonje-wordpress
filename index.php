@@ -104,7 +104,7 @@
     while ( $acao_query2->have_posts() ) : $acao_query2->the_post();
 ?>
 
-        <div id="version-normal-footer" class="p-2 text-center text-white d-flex justify-content-center align-items-center" style="min-height: 619px; background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
+        <div id="version-footer" class="p-2 text-center text-white d-flex justify-content-center align-items-center" style="min-height: 619px; background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
           <div class="container">
             <div class="row">
               <div class="col-md-12" id="text-banner-footer">
@@ -123,24 +123,5 @@
         </div>
         
 <?php endwhile; wp_reset_query(); ?> 
-
-
-
-
-<!-- versão mobile -->
-<div id="version-mobile-footer" class="p-2 text-center bg-light text-white bg-banner-footer-mobile d-flex justify-content-center align-items-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12" id="text-banner-footer">
-        <h2 class="title-banner-footer text-white mb-3">Download the app now.</h2>
-        <h4 class="second-title-banner-footer">Most calendars are designed for teams.</h4>
-        <div class="btn-banner-footer mt-2 pt-3 d-flex justify-content-between align-items-center">
-          <a href="#" class="general-btn-squad-rounded btn-red btn-size-footer">Buy now</a>
-          <a href="#" class="general-btn-squad-rounded btn-wit btn-size-footer">Try for free</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <?php get_footer(); ?>
