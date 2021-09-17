@@ -2,8 +2,8 @@
   <div class="container">
     <div id="footer-items" class="d-flex flex-md-row flex-column justify-content-md-between justify-content-center align-items-center">
       <div class="logo-rodape">
-        <a class="navbar-brand" href="#">
-          <img src="<?php bloginfo('template_url'); ?>/assets/images/logo-bella-olonje-rodape.png"> 
+        <a class="navbar-brand" href="<?php bloginfo('wpurl');?>">
+          <?php dynamic_sidebar('sidebar-marcarodape'); ?>
         </a>
       </div>
       <div class="social-icons d-flex justify-content-between align-items-center">
@@ -12,7 +12,7 @@
         <a href="#"><img src="<?php bloginfo('template_url'); ?>/assets/images/img-instagram.png"></a>
       </div>
       <div class="text-copyright">
-        Copywright 2020 Bella Onojie.com
+        Copywright <?php echo date(Y); ?> Bella Onojie.com
       </div>
     </div>
   </div>
