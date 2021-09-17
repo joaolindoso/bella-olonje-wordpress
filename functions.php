@@ -1,5 +1,12 @@
 <?php
 
+$args = array(
+	'width'         => 206,
+	'height'        => 102,
+	'uploads'       => true,
+);
+add_theme_support( 'custom-header', $args );
+
 register_nav_menu( 'menu-topo', __( 'Menu Topo', '' ) );
 
 /* Alterando a compressão das imagens */
