@@ -104,7 +104,7 @@
     while ( $acao_query2->have_posts() ) : $acao_query2->the_post();
 ?>
 
-        <div id="version-footer" class="p-2 text-center text-white d-flex justify-content-center align-items-center" style="min-height: 619px; background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
+        <div id="version-footer" class="p-2 text-center text-white d-flex justify-content-center align-items-center" style="background-image: url('<?php echo get_the_post_thumbnail_url();?>')">
           <div class="container">
             <div class="row">
               <div class="col-md-12" id="text-banner-footer">
